@@ -41,22 +41,7 @@ Circuit Connections
 
 Connection Flow
 
-ESP32 GPIO 4
-    
-     ↓
-  
-  220Ω–330Ω
- 
-   Resistor
- 
-     ↓
- 
- LED 1 Anode (+)
- 
- LED 1 Cathode (−)
- 
-     ↓
-    GND
+ESP32 GPIO 4 → 220Ω–330Ω , Resistor → LED 1 Anode (+), LED 1 Cathode (−) → GND
 
 ESP32 GPIO 5
  
@@ -166,6 +151,7 @@ Expected Output
 The LEDs continuously follow the sequence:
 
 LED 1 ON  →  1 second  →  LED 1 OFF →  1 second  →  LED 1 ON
+
 LED 2 OFF →  1 second  →  LED 2 ON  →  1 second  →  LED 2 OFF
                                                                   → Repeat
 
