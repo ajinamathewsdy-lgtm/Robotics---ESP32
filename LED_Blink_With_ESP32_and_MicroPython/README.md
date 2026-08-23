@@ -40,23 +40,7 @@ Circuit Connections
 
 Connection Flow
 
-ESP32 GPIO 2
-
-     |
-    
-  220Ω–330Ω
-
-   Resistor
-
-      |
-
- LED Anode (+)
-
- LED Cathode (−)
-
-     |
-
-    GND
+ESP32 GPIO 2    → 220Ω–330Ω, Resistor   → LED Anode (+), LED Cathode (−)    → GND
 
 ---
 
