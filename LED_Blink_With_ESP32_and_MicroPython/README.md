@@ -6,23 +6,26 @@ This project demonstrates a basic LED blinking operation using an ESP32 developm
 
 Objective
 
-Objective| Description
-GPIO Control| Configure GPIO 2 as a digital output
-LED Control| Turn the LED ON and OFF using MicroPython
-Timing| Use the "time" module to create 1-second delays
-Programming| Learn the basic structure of an ESP32 MicroPython program
+| Objective | Description |
+|-----------|-------------|
+| GPIO Control | Configure GPIO 2 as a digital output |
+| LED Control | Turn the LED ON and OFF using MicroPython |
+| Timing Control | Use the `time` module to create 1-second delays |
+| ESP32 Programming | Understand basic GPIO programming using MicroPython |
+| Continuous Operation | Execute the LED blinking sequence continuously |
 
 ---
 
 Components Required
 
-Component| Quantity| Purpose
-ESP32 Development Board| 1| Main microcontroller
-LED| 1| Output indicator
-220Ω–330Ω Resistor| 1| Limits current through the LED
-Breadboard| 1| Circuit assembly
-Jumper Wires| 2–3| Electrical connections
-USB Cable| 1| Power and programming
+| Component | Quantity |
+|-----------|----------|
+| ESP32 Development Board | 1 |
+| LED | 1 |
+| 220Ω–330Ω Resistor | 1 |
+| Breadboard | 1 |
+| Jumper Wires | 2–3 |
+| USB Cable | 1 |
 
 «Note: If your ESP32 board has an onboard LED connected to GPIO 2, an external LED is not required.»
 
@@ -30,33 +33,46 @@ USB Cable| 1| Power and programming
 
 Circuit Connections
 
-Component| Pin| ESP32 Connection
-LED| Anode (+)| GPIO 2 through 220Ω–330Ω resistor
-LED| Cathode (−)| GND
+| Connection | Purpose |
+|------------|---------|
+| ESP32 GPIO 2 → 220Ω–330Ω Resistor → LED Anode (+) | Controls the LED |
+| LED Cathode (−) → ESP32 GND | Completes the circuit |
 
 Connection Flow
 
 ESP32 GPIO 2
+
      │
+
      │
+
   220Ω–330Ω
+
    Resistor
+
      │
+
      │
+
  LED Anode (+)
+
  LED Cathode (−)
+
      │
+
      │
+
     GND
 
 ---
 
 Software Requirements
 
-Software / Tool| Purpose
-Thonny IDE| Writing, uploading and running MicroPython programs
-MicroPython| Programming environment running on the ESP32
-USB Cable| Communication between ESP32 and computer
+| Software | Purpose |
+|----------|---------|
+| Thonny IDE | Writing, uploading and running MicroPython programs |
+| MicroPython | Programming environment for ESP32 |
+| USB Cable | Connects ESP32 to the computer |
 
 «Note: MicroPython firmware only needs to be installed on the ESP32 during the initial setup. If MicroPython is already installed, the program can be directly uploaded and executed using Thonny.»
 
@@ -64,9 +80,10 @@ USB Cable| Communication between ESP32 and computer
 
 Modules Used
 
-Module| Purpose
-"machine.Pin"| Configures and controls the ESP32 GPIO pin
-"time"| Provides the delay function used in the program
+| Module | Purpose |
+|--------|---------|
+| machine.Pin | Configures and controls the ESP32 GPIO pin |
+| time | Provides the delay function |
 
 No external libraries are required for this project.
 
@@ -74,8 +91,11 @@ No external libraries are required for this project.
 
 GPIO Configuration
 
-GPIO Pin| Configuration| Function
-GPIO 2| "Pin.OUT"| Controls the LED
+| GPIO Connection | Configuration | Purpose |
+|-----------------|---------------|---------|
+| GPIO 2 | Pin.OUT | Controls the LED |
+| GND | Ground | Completes the LED circuit |
+
 
 ---
 
@@ -93,12 +113,11 @@ GPIO 2| "Pin.OUT"| Controls the LED
 
 LED Operation
 
-Step| LED State| Duration
-1| ON| 1 second
-2| OFF| 1 second
-3| ON| 1 second
-4| OFF| 1 second
-5| Repeats continuously| —
+| LED State | Duration | Operation |
+|-----------|----------|-----------|
+| ON | 1 second | led.on() |
+| OFF | 1 second | led.off() |
+| Repeat | Continuous | while True 
 
 ---
 
@@ -120,24 +139,24 @@ while True:
 
 Procedure
 
-Step| Procedure
-1| Connect the ESP32 to the computer using a USB cable.
-2| Open Thonny IDE.
-3| Select the MicroPython interpreter for ESP32.
-4| Connect Thonny to the ESP32.
-5| Enter or open the MicroPython program.
-6| Run the program using Thonny.
-7| Observe the LED connected to GPIO 2.
+1. Connect the ESP32 to the computer using a USB cable.
+2. Open Thonny IDE.
+3. Select the MicroPython interpreter for ESP32.
+4. Connect Thonny to the ESP32.
+5. Enter or open the MicroPython program.
+6. Run the program using Thonny.
+7. Observe the LED connected to GPIO 2.
 
 ---
 
 Expected Output
 
-Parameter| Expected Result
-LED ON Time| 1 second
-LED OFF Time| 1 second
-Operation| Continuous blinking
-Controlled Pin| GPIO 2
+| Parameter | Expected Output |
+|-----------|-----------------|
+| LED ON | LED remains ON for 1 second |
+| LED OFF | LED remains OFF for 1 second |
+| Sequence | ON → OFF → ON → OFF |
+| Operation | Repeats continuously |
 
 The LED continuously follows the sequence:
 
