@@ -42,9 +42,11 @@ Circuit Connections
 Connection Flow
 
 ESP32 GPIO 13 → HC-SR04 TRIG
+
 ESP32 GPIO 12 ← HC-SR04 ECHO
 
 ESP32 5V/VIN  → HC-SR04 VCC
+
 ESP32 GND     → HC-SR04 GND
 
 ---
@@ -148,9 +150,13 @@ Expected Output
 The Thonny Shell will display output similar to:
 
 Distance: 25.43 cm
+
 Distance: 25.18 cm
+
 Distance: 24.97 cm
+
 Distance: 25.31 cm
+
 ...
 
 ---
