@@ -42,25 +42,19 @@ Connection Flow
 
 ESP32 GPIO 2
 
-     │
-
-     │
-
+     |
+    
   220Ω–330Ω
 
    Resistor
 
-     │
-
-     │
+      |
 
  LED Anode (+)
 
  LED Cathode (−)
 
-     │
-
-     │
+     |
 
     GND
 
@@ -123,17 +117,7 @@ LED Operation
 
 Program Code
 
-from machine import Pin
-import time
-
-led = Pin(2, Pin.OUT)
-
-while True:
-    led.on()
-    time.sleep(1)
-
-    led.off()
-    time.sleep(1)
+The complete Program code is available in the "LED_Blink_With_ESP32_and_MicroPython.py" file.
 
 ---
 
